@@ -39,6 +39,7 @@ html.lb-disable-scrolling {
   border: none;
 }
 
+
 .lb-outerContainer {
   position: relative;
   *zoom: 1;
@@ -200,4 +201,10 @@ html.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+
+/* ********************************************************* */
+.flex_container{
+  display: flex;
 }
