@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -16,10 +17,10 @@ function Header(props) {
                                 {/* ***** Logo End ***** */}
                                 {/* ***** Menu Start ***** */}
                                 <ul className="nav">
-                                    <li className="scroll-to-section"><a href="#={'/'}" className="active">Home</a></li>
-                                    <li className="scroll-to-section"><a href="#men">Men's</a></li>
-                                    <li className="scroll-to-section"><a href="#women">Women's</a></li>
-                                    <li className="scroll-to-section"><a href="#kids">Kid's</a></li>
+                                    <li className="scroll-to-section"><NavLink exact to="/" >Home</NavLink></li>
+                                    <li className="scroll-to-section"><NavLink exact to="/man">Men's</NavLink></li>
+                                    <li className="scroll-to-section"><NavLink exact to="/women">Women's</NavLink></li>
+                                    <li className="scroll-to-section"><NavLink exact to="/kid">Kid's</NavLink></li>
                                     <li className="submenu">
                                         <a href="javascript:;">Pages</a>
                                         <ul>
@@ -39,7 +40,7 @@ function Header(props) {
                                         </ul>
                                     </li>
                                     <li className="scroll-to-section"><a href="#explore">Explore</a></li>
-                                    <li className="scroll-to-section"><a href="#">Login / signyp</a></li>
+                                    <li className="scroll-to-section"><NavLink exact to={'/auth'}>Login / signyp</NavLink></li>
                                 </ul>
                                 <a className="menu-trigger">
                                     <span>Menu</span>
