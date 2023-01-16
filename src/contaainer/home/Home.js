@@ -4,33 +4,16 @@ import Slider from 'react-slick';
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
-            className={className}
-            // style={{ ...style, display: "block", background: "green" }}
-            style={{
-                ...style, display: "block",
-                backgroundColor: "transparent ",
-                width: "50px", fontSize: "25px",
-                height: "50px", lineHeight: "48px",
-                color: "#2a2a2a", border: " 1px solid #2a2a2a",
-                color:"red"
-            }}
-            onClick={onClick}
-        />
+        <a onClick={onClick} className="leftArrow"><i class="fa fa-circle-left"></i></a>
     );
 }
 
-// display: inline-block;
-//     font-family: 'FontAwesome';
-//     color: #2a2a2a;
-//     font-size: 25px;
-//     font-weight: 700;
-//     content: '\f104';
-//     width: 50px;
-//     height: 50px;
-//     background-color: transparent;
-//     line-height: 48px;
-//     border: 1px solid #2a2a2a;
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <a onClick={onClick} className="rightArrow"><i class="fa fa-circle-right"></i></a>
+    );
+}
 
 function Home(props) {
 
@@ -41,7 +24,7 @@ function Home(props) {
         slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <SamplePrevArrow />,
-        prevArrow: <SamplePrevArrow />,
+        prevArrow: <SampleNextArrow />,
         variableWidth: true
     };
 

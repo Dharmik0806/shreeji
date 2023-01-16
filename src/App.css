@@ -33,26 +33,6 @@
 .item img {
   width: 100% !important;
 }
-.slick-next{
-  right: -67px !important;
-}
-.slick-prev {
-  left: -75px !important;
-}
-
-.slick-prev:before {
-  content: '<';
-  padding: 10px;
-  color: rgb(122, 115, 115) !important;
-}
-
-.slick-next:before {
-  content: '>';
-  padding: 10px;
-  color: rgb(122, 115, 115) !important;
-
-}
-
 
 @keyframes App-logo-spin {
   from {
@@ -62,4 +42,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* arrow */
+.leftArrow ,
+.rightArrow{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(214, 218, 214);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.leftArrow i ,
+.rightArrow i{
+color:#a7a0a0;
+}
+
+.leftArrow:hover,
+.rightArrow:hover{
+  box-shadow: 1px 1px 4px gray;
+  transition: ease-in 0.3s;
+}
+
+/* left arrow */
+.leftArrow{
+  position: absolute;
+  left: -100px;
+    top: 170px;
+}
+
+/* right arrrow */
+.rightArrow{ 
+  position: absolute;
+  right: -100px;
+    top: 170px;
 }

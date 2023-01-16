@@ -4,23 +4,26 @@ import Slider from 'react-slick';
 function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
+        <a onClick={onClick} className="leftArrow"><i class="fa fa-circle-left"></i></a>
+    );
+}
+
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <a onClick={onClick} className="rightArrow"><i class="fa fa-circle-right"></i></a>
     );
 }
 function Women(props) {
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <SamplePrevArrow />,
-        prevArrow: <SamplePrevArrow />,
+        prevArrow: <SampleNextArrow />,
         variableWidth: true
     };
     return (
