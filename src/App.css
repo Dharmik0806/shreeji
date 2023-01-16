@@ -31,8 +31,29 @@
   width: 98% !important ;
 }
 .item img {
-  width: 100%;
+  width: 100% !important;
 }
+.slick-next{
+  right: -67px !important;
+}
+.slick-prev {
+  left: -75px !important;
+}
+
+.slick-prev:before {
+  content: '<';
+  padding: 10px;
+  color: rgb(122, 115, 115) !important;
+}
+
+.slick-next:before {
+  content: '>';
+  padding: 10px;
+  color: rgb(122, 115, 115) !important;
+
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

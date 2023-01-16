@@ -6,11 +6,31 @@ function SamplePrevArrow(props) {
     return (
         <div
             className={className}
-            style={{ ...style, display: "block", background: "green" }}
+            // style={{ ...style, display: "block", background: "green" }}
+            style={{
+                ...style, display: "block",
+                backgroundColor: "transparent ",
+                width: "50px", fontSize: "25px",
+                height: "50px", lineHeight: "48px",
+                color: "#2a2a2a", border: " 1px solid #2a2a2a",
+                color:"red"
+            }}
             onClick={onClick}
         />
     );
 }
+
+// display: inline-block;
+//     font-family: 'FontAwesome';
+//     color: #2a2a2a;
+//     font-size: 25px;
+//     font-weight: 700;
+//     content: '\f104';
+//     width: 50px;
+//     height: 50px;
+//     background-color: transparent;
+//     line-height: 48px;
+//     border: 1px solid #2a2a2a;
 
 function Home(props) {
 
