@@ -204,8 +204,3 @@ html.lb-disable-scrolling {
 }
 
 
-/* ********************************************************* */
-.flex_container{
-  display: flex;
-  /* border:  3px solid red; */
-}

@@ -137,17 +137,20 @@ function Signup(props) {
 
             {
                 reset ?
-                    <>
-                        <a onClick={() => { setType('login'); setReset(false) }} >Already Have An Account? Login</a>
-                    </>
+                        // <a onClick={() => { setType('login'); setReset(false) }} >Already Have An Account? Login</a>
+                        <span  onClick={() => { setType('login'); setReset(false) }}>Already Have An Account? <a>Login</a></span>
                     :
                     type === 'signup' ?
                         // <p> <a onClick={() => { setType('signup') }} >login ?</a></p>
-                        <a onClick={() => { setType('login'); setReset(false) }} >Already Have An Account? Login</a>
+                        // <a onClick={() => { setType('login'); setReset(false) }} >Already Have An Account? Login</a>
+                        <span onClick={() => { setType('login'); setReset(false) }} >Already Have An Account? <a>Login</a></span>
                         :
                         <>
-                            <a onClick={() => { setType('signup'); setReset(false) }} >Create an account? Signup</a> <br />
-                            <a onClick={() => { setReset(true) }} >Forgot password?</a>
+                            {/* <a onClick={() => { setType('signup'); setReset(false) }} >Create an account? Signup</a> <br />
+                            <a onClick={() => { setReset(true) }} >Forgot password?</a> */}
+
+                            <span onClick={() => { setType('signup'); setReset(false) }} >Create an account?<a>Signup</a></span>
+                            <span onClick={() => { setReset(true) }} ><a>Forgot password?</a></span>
                         </>
 
             }
