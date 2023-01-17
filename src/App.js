@@ -3,10 +3,10 @@ import './App.css';
 import Footer from './component/footer/Footer';
 import Header from './component/header/Header';
 import Signup from './contaainer/auth/Signup';
+import Contect1 from './contaainer/contect1/Contect1';
 import Home from './contaainer/home/Home';
 import Kid from './contaainer/kid/Kid';
 import Man from './contaainer/man/Man';
-import Slider1 from './contaainer/Slider1';
 import Women from './contaainer/women/Women';
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <Route exact path={'/women'} component={Women} />
         <Route exact path={'/kid'} component={Kid} />
         <Route exact path={'/auth'} component={Signup} />
+        <Route exact path={'/contect1'} component={Contect1}/>
       </Switch>
       <Footer />  
     </>

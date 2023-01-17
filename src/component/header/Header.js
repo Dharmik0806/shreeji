@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
-        <>
-            {/* ***** Header Area Start ***** */}
             <header className="header-area header-sticky">
                 <div className="container">
                     <div className="row">
@@ -41,6 +39,7 @@ function Header(props) {
                                     </li>
                                     <li className="scroll-to-section"><a href="#explore">Explore</a></li>
                                     <li className="scroll-to-section"><NavLink exact to={'/auth'}>Login / signyp</NavLink></li>
+                                    <li className="scroll-to-section"><NavLink exact to={'/contect1'}>contect</NavLink></li>
                                 </ul>
                                 <a className="menu-trigger">
                                     <span>Menu</span>
@@ -51,9 +50,8 @@ function Header(props) {
                     </div>
                 </div>
             </header>
-            {/* ***** Header Area End ***** */}
 
-        </>
+     
     );
 }
 
