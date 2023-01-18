@@ -10,9 +10,7 @@ function Contect1(props) {
     let schema = yup.object().shape({
         name: yup.string().required('please enter name'),
         email: yup.string().email('invalid email').required('please enter email'),
-        // mono: yup.string().required("please enter mobail number"),
         mono: yup.string().required("please enter mobail number").matches(phoneRegExp, 'Phone number is not valid'),
-
         message: yup.string().required("please enter message")
     });
 
@@ -30,13 +28,15 @@ function Contect1(props) {
         },
     });
 
-    const { handleChange, handleBlur, handleSubmit, errors, touched } = formikobj
+    const { handleChange, handleBlur, handleSubmit, errors, touched ,setFieldTouched} = formikobj
     console.log(errors, touched);
+
     return (
         <>
             <div className="form-container">
                 <div className="contectForm">
                     <h2>Send us a message</h2>
+
                     <Formik values={formikobj}>
                         <Form onSubmit={handleSubmit}>
 
@@ -50,10 +50,9 @@ function Contect1(props) {
                                     class="form-control"
                                     placeholder='First Name'
 
-                                    onChange={handleChange}
+                                    onChange={e => {setFieldTouched('name');  handleChange(e)}}
                                     onBlur={handleBlur}
                                 />
-
 
                                 {errors.name !== '' && touched.name ? <p className='form-error'>{errors.name}</p> : null}
                             </div>
@@ -68,7 +67,7 @@ function Contect1(props) {
                                     class="form-control"
                                     placeholder='Email-ID'
 
-                                    onChange={handleChange}
+                                    onChange={e => {setFieldTouched('email');  handleChange(e)}}
                                     onBlur={handleBlur}
                                 />
                                 {errors.email !== '' && touched.email ? <p className='form-error'>{errors.email}</p> : null}
@@ -84,21 +83,11 @@ function Contect1(props) {
                                     class="form-control"
                                     placeholder='Mobail Number'
 
-                                    onChange={handleChange}
+                                    onChange={e => {setFieldTouched('mono');  handleChange(e)}}
                                     onBlur={handleBlur}
                                 />
                                 {errors.mono !== '' && touched.mono ? <p className='form-error'>{errors.mono}</p> : null}
                             </div>
-
-
-
-
-                            {/* < id="w3review" name="w3review" ></textarea> */}
-
-
-
-
-
 
                         <div className='form-input'>
                             <label for="message">Message : </label><br />
@@ -110,7 +99,7 @@ function Contect1(props) {
                              id='message'
                              class="form-control"
                              placeholder='Enter Message'
-                             onChange={handleChange}
+                             onChange={e => {setFieldTouched('message');  handleChange(e)}}
                              onBlur={handleBlur}
                             >
                                
