@@ -12,7 +12,6 @@ function Signup(props) {
     let init = {};
 
     if (type === 'signup' && reset === false) {
-        // schema = yup.object().shape({
         schemaObj = {
             fname: yup.string().required('please enter name'),
             mono: yup.string().required("please enter mobail number"),
@@ -20,7 +19,6 @@ function Signup(props) {
             password: yup.string().required('Please Enter Password'),
             date: yup.date().required('enter date'),
             text: yup.string().required("please enter message"),
-            // check: yup.bool().oneOf([true], 'You need to accept the terms and conditions'),
         };
 
         init = {
@@ -32,7 +30,7 @@ function Signup(props) {
             text: ''
         }
 
-    } else if (type === 'login' && reset === false ) {
+    } else if (type === 'login' && reset === false) {
         schemaObj = {
             email: yup.string().email('invalid email').required('please enter email'),
             password: yup.string().required('Please Enter Password')
@@ -52,13 +50,12 @@ function Signup(props) {
             email: ''
         }
     }
-    // _________________ ________________________________________________Formic obj
 
     let schema = yup.object().shape(schemaObj);
     const formikobj = useFormik({
         initialValues: init,
         validationSchema: schema,
-        enableReinitialize: true,  //navu page aave tyare z
+        enableReinitialize: true,
         onSubmit: values => {
             console.log(values);
         },
@@ -140,6 +137,31 @@ function Signup(props) {
 
                     </FormGroup>
 
+                    {/* mono */}
+                    {
+                        reset === true ? null :
+                            type === 'signup' ?
+                                <FormGroup>
+                                    <Label for="Fname">
+                                       Mobail number
+                                    </Label>
+                                    <Input
+                                        id="mono"
+                                        name="mono"
+                                        placeholder="Enter 10 digit number"
+                                        type="mono"
+
+                                        onBlur={handleBlur}
+                                        onChange={e => { setFieldTouched('mono'); handleChange(e) }}
+                                    />
+                                    {errors.mono !== '' && touched.mono ? <p className='form-error'>{errors.mono}</p> : null}
+                                </FormGroup>
+                                :
+                                null
+                    }
+
+
+                    {/*  */}
                     {
                         reset === true ? null :
                             <FormGroup>

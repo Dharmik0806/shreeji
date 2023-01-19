@@ -116,12 +116,14 @@
   /* min-height: 800px; */
   margin: 100px auto 0px auto;
   border-radius: 10px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 3px grey;
 }
 
 .form-container .contectForm {
   width: 50%;
   padding: 40px 45px;
-  background: radial-gradient(circle, rgb(183 170 176 / 20%) 0%, rgb(193 207 224) 100%);
+  /* background: radial-gradient(circle, rgb(183 170 176 / 20%) 0%, rgb(193 207 224) 100%); */
   border-radius: 10px 0px 0px 10px;
   max-height: 675px;
 }
@@ -131,8 +133,8 @@
   max-height: 675px;
   padding: 40px 45px;
   border-radius: 0px 10px 10px 0px;
-  background: linear-gradient(137deg, rgba(143, 138, 138, 1) 0.5%, rgba(210, 203, 203, 1) 12%, rgba(170, 162, 162, 1) 32%,
-      rgba(154, 148, 148, 1) 48%, rgba(84, 77, 77, 1) 72%, rgba(218, 214, 210, 1) 100%);
+  /* background: linear-gradient(137deg, rgba(143, 138, 138, 1) 0.5%, rgba(210, 203, 203, 1) 12%, rgba(170, 162, 162, 1) 32%,
+      rgba(154, 148, 148, 1) 48%, rgba(84, 77, 77, 1) 72%, rgba(218, 214, 210, 1) 100%); */
 
 }
 
@@ -155,12 +157,12 @@
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  background-color: rgb(238, 235, 235);
+  /* background-color: rgb(238, 235, 235); */
 }
 
 .form-container .contectInfo .item i {
-  padding: 10px;
-  font-size: 25px;
+  /* padding: 10px; */
+  font-size: 15px;
 cursor: pointer;
 }
 
@@ -171,16 +173,17 @@ cursor: pointer;
 }
 
 .form-btn input {
-  border: 2px solid #7979b8;
+  border: 1px solid #7979b8;
   font-size: 17px;
   padding: 5px 10px;
   border-radius: 5px;
-  background: radial-gradient(circle, rgba(148, 167, 223, 1) 62%, rgb(132, 158, 237) 100%);
+  /* background: radial-gradient(circle, rgba(148, 167, 223, 1) 62%, rgb(132, 158, 237) 100%); */
 }
 
 .form-btn input:hover {
   transition: ease-in-out 0.5s;
-  background: radial-gradient(circle, rgb(103, 135, 233) 62%, rgb(132, 158, 237) 100%);
+  box-shadow: 1px 1px 3px black;
+  /* background: radial-gradient(circle, rgb(103, 135, 233) 62%, rgb(132, 158, 237) 100%); */
 }
 
 .form-container p {
@@ -200,7 +203,7 @@ cursor: pointer;
   width: 600px;
   border: 1px solid grey;
   border-radius: 5px;
-  background: linear-gradient(137deg, rgba(132,155,222,1) 1%, rgba(177,184,203,1) 76%, rgba(151,161,187,1) 100%, rgba(183,193,222,1) 100%);
+  /* background: linear-gradient(137deg, rgba(132,155,222,1) 1%, rgba(177,184,203,1) 76%, rgba(151,161,187,1) 100%, rgba(183,193,222,1) 100%); */
 }
 
 .signup_container a{

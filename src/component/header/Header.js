@@ -40,6 +40,7 @@ function Header(props) {
                                     <li className="scroll-to-section"><a href="#explore">Explore</a></li>
                                     <li className="scroll-to-section"><NavLink exact to={'/auth'}>Login / signyp</NavLink></li>
                                     <li className="scroll-to-section"><NavLink exact to={'/contect1'}>contect</NavLink></li>
+                                    <li className="scroll-to-section"><NavLink exact to={'/form22'}>FORM2</NavLink></li>
                                 </ul>
                                 <a className="menu-trigger">
                                     <span>Menu</span>
