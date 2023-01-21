@@ -9,6 +9,7 @@ import Form2 from './contaainer/Form2/Form2';
 import Home from './contaainer/home/Home';
 import Kid from './contaainer/kid/Kid';
 import Man from './contaainer/man/Man';
+import Formval from './contaainer/test/Formval';
 import First from './contaainer/TRY/First';
 import Women from './contaainer/women/Women';
 
@@ -26,6 +27,7 @@ function App() {
         <Route exact path={'/contect1'} component={Contect1}/>
         <Route exact path={"/form22"} component ={Form2} />
         <Route exact path={"/first"} component ={First} />
+        <Route exact path={"/test"} component ={Formval} />
 
       </Switch>
       <Footer />  

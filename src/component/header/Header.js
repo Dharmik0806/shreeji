@@ -15,6 +15,7 @@ function Header(props) {
                                 {/* ***** Logo End ***** */}
                                 {/* ***** Menu Start ***** */}
                                 <ul className="nav">
+                                    <li className="scroll-to-section"><NavLink exact to="/test" >FORM</NavLink></li>
                                     <li className="scroll-to-section"><NavLink exact to="/" >Home</NavLink></li>
                                     <li className="scroll-to-section"><NavLink exact to="/man">Men's</NavLink></li>
                                     <li className="scroll-to-section"><NavLink exact to="/women">Women's</NavLink></li>
