@@ -2335,3 +2335,44 @@
   overflow: visible;
   clip: auto;
 }
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* .contect-table{
+  border: 1px solid gray;
+} */
+
+.table-container{
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contect-table td,th{
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+#student{
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#student .student-container{
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(139, 127, 127);
+  box-shadow: -8px 8px bisque ;
+
+}
+
+#student .btn{
+background-color: rgb(212, 209, 206);
+}  

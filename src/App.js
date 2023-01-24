@@ -9,6 +9,8 @@ import Form2 from './contaainer/Form2/Form2';
 import Home from './contaainer/home/Home';
 import Kid from './contaainer/kid/Kid';
 import Man from './contaainer/man/Man';
+import FirstOne from './contaainer/storageClass/FirstOne';
+import Student from './contaainer/Student';
 import Formval from './contaainer/test/Formval';
 import First from './contaainer/TRY/First';
 import Women from './contaainer/women/Women';
@@ -29,6 +31,9 @@ function App() {
         <Route exact path={"/first"} component ={First} />
         <Route exact path={"/test"} component ={Formval} />
 
+        {/* storage class */}
+    <Route exact path="/storage1" component={FirstOne}/>
+    <Route exact path="/student111" component={Student}/>
       </Switch>
       <Footer />  
     </>
