@@ -1,4 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
+import Layout from './Admin/component/Layout';
+import Doctor from './Admin/container/Doctor';
+import Medision from './Admin/container/Medision';
 import './App.css';
 import Footer from './component/footer/Footer';
 import FormValidation from './component/FormVali/FormValidation';
@@ -18,8 +21,8 @@ import Women from './contaainer/women/Women';
 function App() {
   return (
     <>
-      <Header />
-      {/* <Home /> */}
+      {/* <Header />
+      <Home />
       <Switch>
         <Route exact path={'/'} component={Home} />
         <Route exact path={'/man'} component={Man} />
@@ -31,11 +34,19 @@ function App() {
         <Route exact path={"/first"} component ={First} />
         <Route exact path={"/test"} component ={Formval} />
 
-        {/* storage class */}
+        storage class
     <Route exact path="/storage1" component={FirstOne}/>
     <Route exact path="/student111" component={Student}/>
       </Switch>
-      <Footer />  
+      <Footer />   */}
+
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/medision" component={Medision} />
+          <Route exact path="/doctor" component={Doctor} />
+        </Switch>
+      </Layout>
     </>
   );
 }
